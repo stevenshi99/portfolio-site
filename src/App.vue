@@ -48,7 +48,7 @@ button {
   }
 
   background-image: url("@/assets/image0.jpeg");
-  background-size: cover;
+  background-size: contain;
 
   min-height: 100vh;
 

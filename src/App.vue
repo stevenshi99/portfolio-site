@@ -51,6 +51,7 @@ button {
   background-size: contain;
 
   min-height: 100vh;
+  overflow: hidden;
 
 }
 </style>

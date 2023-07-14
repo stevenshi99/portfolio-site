@@ -1,16 +1,9 @@
 <template>
-    <aside :class="`${is_expanded && 'is-expanded'}`">
+    <div class="sidebar" :class="`${is_expanded && 'is-expanded'}`">
         <div class="logo">
             <img src="@/assets/logo.png" alt="">
         </div>
 
-        <div class="menu-toggle-wrap">
-            <button class="menu-toggle" @click="ToggleMenu">
-                <span class="material-symbols-rounded">keyboard_double_arrow_right</span>
-            </button>
-        </div>
-
-        <h3>Menu</h3>
         <div class="menu">
             <router-link class="button" to="/">
                 <span class="material-symbols-rounded">home</span>
@@ -29,7 +22,14 @@
                 <span class="text">Contact</span>
             </router-link>
         </div>
-    </aside>
+
+        <div class="menu-toggle-wrap">
+            <button class="menu-toggle" @click="ToggleMenu">
+                <span class="material-symbols-rounded">keyboard_double_arrow_down</span>
+            </button>
+        </div>
+
+    </div>
 </template>
 
 <script setup>
@@ -43,11 +43,10 @@ const ToggleMenu = () => {
 </script>
 
 <style lang="scss" scoped>
-aside {
+.sidebar {
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    width: 4rem;
-    min-height: 100vh;
     overflow: hidden;
     padding: 1rem;
 
@@ -62,16 +61,16 @@ aside {
         img {
             width: 2rem;
         }
+
+        display: flex;
+        justify-content: center;
     }
 
     .menu-toggle-wrap {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         margin-bottom: 1rem;
 
-        position: relative;
-        top: 0;
-        right: 0;
         transition: 0.2s ease-out;
 
         .menu-toggle {
@@ -86,30 +85,22 @@ aside {
             &:hover {
                 .material-symbols-rounded {
                     color: var(--primary);
-                    transform: translateX(0.25rem);
+                    transform: translateY(0.25rem);
                 }
             }
         }
     }
 
-    h3, .button .text {
+    .button .text {
         opacity: 0;
         transition: 0.3s ease-out;
-    }
-
-    h3 {
-        color: var(--grey);
-        font-size: 0.875rem;
-        margin-bottom: 0.5rem;
-        text-transform: uppercase;
     }
 
     .menu {
         margin: 0 -1rem;
 
         .button {
-            display: flex;
-            align-items: center;
+            display: none;
             text-decoration: none;
 
             padding: 0.5rem 1rem;
@@ -126,7 +117,8 @@ aside {
                 transition: 0.2s ease-out;
             }
 
-            &:hover, &.router-link-exact-active {
+            &:hover,
+            &.router-link-exact-active {
                 background-color: var(--dark-alt);
 
                 .material-symbols-rounded,
@@ -139,15 +131,12 @@ aside {
                         'FILL' 1
                 }
             }
-            
-            &.router-link-exact-active {
-                border-right: 5px solid var(--primary);
-            }
+
         }
     }
 
     &.is-expanded {
-        width: var(--sidebar-width);
+        height: 40vh;
 
         .menu-toggle-wrap {
             top: -3rem;
@@ -157,13 +146,17 @@ aside {
             }
         }
 
-        h3,
         .button .text {
             opacity: 1;
 
         }
 
         .button {
+            display: flex;
+            align-items: center;
+            padding-left: 42vw;
+            justify-content: left;
+
             .material-symbols-rounded {
                 margin-right: 0.5rem;
             }
@@ -171,5 +164,4 @@ aside {
     }
 
 }
-
 </style>

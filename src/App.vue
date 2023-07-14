@@ -1,10 +1,20 @@
 <script setup>
-import Sidebar from "./components/Sidebar.vue"
+import Sidebar from './components/Sidebar.vue';
+import MobileSidebar from './components/MobileSidebar.vue';
+import { MqResponsive } from 'vue3-mq';
+
 </script>
 
 <template>
   <div class="app">
-    <Sidebar />
+    <MqResponsive target="sm">
+      <MobileSidebar />
+    </MqResponsive>
+
+    <MqResponsive target="md">
+      <Sidebar />
+    </MqResponsive>
+
     <router-view />
   </div>
 </template>
@@ -17,6 +27,7 @@ import Sidebar from "./components/Sidebar.vue"
   --dark-alt: #003566;
   --light: #FFD60A;
   --sidebar-width: 18.75rem;
+  --sidebar-height: 20rem;
   --transparent-dark: rgba(0, 8, 20, 0.5);
 }
 
@@ -35,8 +46,10 @@ button {
   background: none;
 }
 
+
 .app {
   display: flex;
+  flex-direction: column;
 
   main {
     flex: 1 1 0;
@@ -53,5 +66,11 @@ button {
   min-height: 100vh;
   overflow: hidden;
 
+}
+
+@media (min-width: 48rem) {
+  .app {
+    flex-direction: row;
+  }
 }
 </style>

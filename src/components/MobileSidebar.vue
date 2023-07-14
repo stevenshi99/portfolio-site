@@ -1,8 +1,8 @@
 <template>
+    <div class="logo">
+        <img src="@/assets/logo.png" alt="">
+    </div>
     <div class="sidebar" :class="`${is_expanded && 'is-expanded'}`">
-        <div class="logo">
-            <img src="@/assets/logo.png" alt="">
-        </div>
 
         <div class="menu">
             <router-link class="button" to="/">
@@ -43,8 +43,21 @@ const ToggleMenu = () => {
 </script>
 
 <style lang="scss" scoped>
+.logo {
+    background-color: var(--dark);
+    padding-top: 1rem;
+
+    img {
+        width: 2rem;
+    }
+
+    display: flex;
+    justify-content: center;
+}
+
 .sidebar {
     display: flex;
+    height: 4.146rem;
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
@@ -55,21 +68,9 @@ const ToggleMenu = () => {
     transition: 0.2s ease-out;
     font-family: 'Roboto Mono', monospace;
 
-    .logo {
-        margin-bottom: 1rem;
-
-        img {
-            width: 2rem;
-        }
-
-        display: flex;
-        justify-content: center;
-    }
-
     .menu-toggle-wrap {
         display: flex;
         justify-content: center;
-        margin-bottom: 1rem;
 
         transition: 0.2s ease-out;
 
@@ -101,6 +102,8 @@ const ToggleMenu = () => {
 
         .button {
             display: none;
+            align-items: center;
+            justify-content: left;
             text-decoration: none;
 
             padding: 0.5rem 1rem;
@@ -136,7 +139,8 @@ const ToggleMenu = () => {
     }
 
     &.is-expanded {
-        height: 40vh;
+        height: 16.146rem;
+        // 226.333
 
         .menu-toggle-wrap {
             top: -3rem;
@@ -153,9 +157,6 @@ const ToggleMenu = () => {
 
         .button {
             display: flex;
-            align-items: center;
-            padding-left: 42vw;
-            justify-content: left;
 
             .material-symbols-rounded {
                 margin-right: 0.5rem;

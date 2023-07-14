@@ -9,7 +9,7 @@ app.use(router)
 app.use(Vue3Mq, {
     breakpoints: {
         sm: 0,
-        md: 768,
+        md: 576,
     }
 })
 app.mount('#app')

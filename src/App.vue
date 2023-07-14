@@ -68,7 +68,7 @@ button {
 
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 36rem) {
   .app {
     flex-direction: row;
   }

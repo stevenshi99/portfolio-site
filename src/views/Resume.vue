@@ -110,13 +110,13 @@
 
 <style lang="scss" scoped>
 .resume-page {
-    background-color: var(--transparent-dark);
+    background-color: rgba(0, 8, 20, 0.8);
     font-family: 'Roboto Mono', monospace;
     align-items: center;
 }
 
 .resume {
-    padding: 3rem 3rem;
+    padding: 3rem 0;
     max-width: 75rem;
     margin: auto;
 
@@ -157,11 +157,22 @@ ul {
 }
 
 li {
-    padding: 0.5rem;
+    padding: 0;
+    margin-bottom: 0.5rem;
 }
 
 a {
     text-decoration: none;
     color: rgb(255, 119, 0);
+}
+
+@media (min-width: 36rem) {
+    li {
+        padding: 0.5rem;
+    }
+
+    .resume {
+        padding: 3rem 3rem;
+    }
 }
 </style>

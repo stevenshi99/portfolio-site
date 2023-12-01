@@ -61,9 +61,7 @@ button {
   }
 
   background-image: url("@/assets/image0.jpeg");
-  background-size: contain;
-
-  min-height: 100vh;
+  background-size: 72% auto;
   overflow: hidden;
 
 }

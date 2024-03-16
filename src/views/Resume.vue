@@ -15,12 +15,10 @@
             </div>
             <div class="content">
                 <ul>
-                    <li>Refactored payment processing system resulting in improved performance and readability of code.
-                    </li>
-                    <li>Converted internal Node packages to Typescript to improve code maintainability.</li>
-                    <li>Created a frontend demo of store checkout experience for headless commerce project.</li>
-                    <li>Implemented an Azure App Config instance with Azure Key Vault to consolidate feature flags and
-                        secrets in one centralized service.</li>
+                    <li>Created a full stack application using React, SpringBoot, and GraphQL to monitor the status of GapTech services.</li>
+                    <li>Built a frontend demo of store checkout experience to demonstrate viability of  headless commerce initiative.</li>
+                    <li>Refactored Paypal and Afterpay payment flow to improve performance and maintainability of codebase.</li>
+                    <li>Created a proof of concept app configuration via Azure Cloud Services. Team and company overall were seeking  a central application solution that could store and dynamically update environment variables and secrets for various services.</li>
                 </ul>
             </div>
 
@@ -57,12 +55,8 @@
             </div>
             <div class="content">
                 <ul>
-                    <li>Automated benchmark processes by developing scripts in Powershell to aid clients in assessing
-                        security levels.</li>
-                    <li>Assisted cybersecurity department with documentation and translation of benchmark processes.
-                    </li>
-                    <li>Performed tests to ensure accuracy and effectiveness of Powershell scripts compared to manual
-                        benchmarking.</li>
+                    <li>Built Powershell scripts to automate benchmark processes used in assessing security levels of various softwares, which resulted in speedup and reduction in errors compared to previous method of manually benchmarking.</li>
+                    <li>Coordinated with the local Czech team in documenting and translating benchmark processes for standardized internal usage and future reference.</li>
                 </ul>
             </div>
 
@@ -83,9 +77,7 @@
 
             <h2>Skills</h2>
             <hr>
-            <p>Java, Javascript, Typescript, Node, React, HTML5, CSS, Oracle SQL, MySQL, PostgresQL, Jest, Enzyme,
-                React Testing Library, JMeter, Python, Vue, Flutter, SpringBoot, Powershell, Assembly, Bash, PHP,
-                Adobe Commerce/Magento, Azure, Git, Trello, Jira, Slack</p>
+            <p>Java, Javascript, Typescript, Node, React, HTML5, CSS, GraphQL, Oracle SQL, MySQL, PostgresQL, Azure, Jest, Enzyme, React Testing Library, Jenkins, GitHub,  SpringBoot, JMeter, Python, Vue, Flutter,Powershell, PHP, Adobe Commerce/Magento, Azure, Git, Trello, Jira, Slack</p>
 
             <h2>Projects</h2>
             <hr>
